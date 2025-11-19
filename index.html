@@ -33,21 +33,29 @@
       padding: 20px;
       transition: background 0.3s, color 0.3s;
     }
-    .toggle-btn {
+    .toggle-btn, .resume-btn {
       position: fixed;
       top: 20px;
-      right: 20px;
-      background: var(--heading);
-      color: var(--bg);
       border: none;
       padding: 10px 18px;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 600;
       transition: 0.3s;
     }
-    .toggle-btn:hover {
+    .toggle-btn {
+      right: 20px;
+      background: var(--heading);
+      color: var(--bg);
+    }
+    .resume-btn {
+      right: 120px;
+      background: var(--card);
+      color: var(--heading);
+      text-decoration: none;
+    }
+    .toggle-btn:hover, .resume-btn:hover {
       opacity: 0.8;
     }
     .header {
@@ -70,6 +78,11 @@
     }
     .section {
       margin-bottom: 45px;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
     .section h2 {
       font-size: 24px;
@@ -116,6 +129,11 @@
       color: var(--subtext);
       margin-bottom: 8px;
     }
+    .project-box a {
+      color: var(--heading);
+      text-decoration: underline;
+      font-weight: 500;
+    }
     .footer {
       text-align: center;
       margin-top: 40px;
@@ -126,6 +144,7 @@
 </head>
 <body>
   <button class="toggle-btn" id="modeToggle">🌙</button>
+  <a class="resume-btn" href="Devesh_G_Resume.pdf" download>📄 Download Resume</a>
 
   <header class="header">
     <h1>Devesh G</h1>
@@ -211,41 +230,86 @@
     </div>
   </section>
 
-  <section class="section">
-    <h2>Project</h2>
-    <div class="project-box">
-      <h3>📊 Adventure Works KPI Dashboard</h3>
-      <p class="sub">Tools Used: Power BI, DAX, Power Query</p>
-      <p class="sub">Domain: Manufacturing & Retail Analytics</p>
-      <ul>
-        <li>Built an interactive dashboard for a global cycling brand.</li>
-        <li>Tracked KPIs like sales, revenue, profit, and returns.</li>
-        <li>Compared regional performance and analyzed product trends.</li>
-        <li>Identified high-value customers using DAX & Power Query.</li>
-      </ul>
-    </div>
-  </section>
+ <section class="section">
+  <h2>Project</h2>
 
-  <section class="section">
-    <h2>Education</h2>
+  <div class="project-box">
+    <h3>📊 Adventure Works KPI Dashboard</h3>
+    <p class="sub">Tools Used: Power BI, DAX, Power Query</p>
+    <p class="sub">Domain: Manufacturing & Retail Analytics</p>
     <ul>
-      <li><strong>Masters in Data Science & AI</strong> – (2025 - Present)<br>
-        FITA Academy, Chennai<br>
-        Focus: Excel, SQL, Python, Power BI, Data Visualization
-      </li>
-      <br>
-      <li><strong>Master of Computer Application (M.C.A)</strong> – (2022 - 2024)<br>
-        University of Madras (Distance Education)
-      </li>
-      <br>
-      <li><strong>B.Sc. in Computer Science</strong> – (2019 - 2022)<br>
-        St. Thomas College of Arts and Science, Chennai
-      </li>
+      <li>Built an interactive dashboard for a global cycling brand</li>
+      <li>Tracked KPIs like sales, revenue, profit, and returns</li>
+      <li>Compared regional performance and analyzed product trends</li>
+      <li>Identified high-value customers using DAX & Power Query</li>
     </ul>
-  </section>
+    <p>
+      <a href="https://app.powerbi.com/view?r=your-report-id" target="_blank">
+        <img src="adventure_works_dashboard.png" alt="Adventure Works Dashboard Screenshot" style="width:100%; max-width:600px; border-radius:8px; margin-top:10px;">
+      </a>
+    </p>
+      </div>
+</section>
+<section class="section">
+  <h2>Education</h2>
+
+  <div class="experience">
+    <div class="exp-header">
+      <h3>FITA Academy – Chennai</h3>
+      <span>2025 – Present</span>
+    </div>
+    <p class="position">Masters in Data Science & AI</p>
+    <ul>
+      <li>Focus: Excel, SQL, Python, Power BI, Data Visualization</li>
+      <li>Currently pursuing intensive hands-on training in analytics and machine learning</li>
+    </ul>
+  </div>
+
+  <div class="experience">
+    <div class="exp-header">
+      <h3>University of Madras – Distance Education</h3>
+      <span>2022 – 2024</span>
+    </div>
+    <p class="position">Master of Computer Application (M.C.A)</p>
+    <ul>
+      <li>Focused on software development, databases, and system design</li>
+    </ul>
+  </div>
+
+  <div class="experience">
+    <div class="exp-header">
+      <h3>St. Thomas College of Arts and Science – Chennai</h3>
+      <span>2019 – 2022</span>
+    </div>
+    <p class="position">B.Sc. in Computer Science</p>
+    <ul>
+      <li>Built strong foundation in programming, algorithms, and data structures</li>
+    </ul>
+  </div>
+</section>
 
   <footer class="footer">
     <p>© 2025 Devesh G | Portfolio</p>
   </footer>
 
-  <
+  <script>
+    const toggleBtn = document.getElementById("modeToggle");
+    const body = document.body;
+
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      body.classList.add("dark");
+      toggleBtn.textContent = "☀️";
+    }
+
+    // Toggle theme and save preference
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      const isDark = body.classList.contains("dark");
+      toggleBtn.textContent = isDark ? "☀️" : "🌙";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  </script>
+</body>
+</html>
