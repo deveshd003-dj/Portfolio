@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devesh G | Data Scientist & Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #2E2E2E;
+      --heading: #000000;
+      --subtext: #555;
+      --card: #F5F5F5;
+    }
+    body.dark {
+      --bg: #1a1a1a;
+      --text: #d4d4d4;
+      --heading: #ffffff;
+      --subtext: #bbbbbb;
+      --card: #2b2b2b;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 20px;
+      transition: 0.3s ease-in-out;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--heading);
+      color: var(--bg);
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .toggle-btn:hover {
+      opacity: 0.8;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .header h1 {
+      font-size: 36px;
+      color: var(--heading);
+    }
+    .role {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--subtext);
+      margin-bottom: 10px;
+    }
+    .contact p a {
+      color: var(--heading);
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 45px;
+    }
+    .section h2 {
+      font-size: 24px;
+      border-bottom: 2px solid var(--heading);
+      width: fit-content;
+      margin-bottom: 15px;
+      color: var(--heading);
+    }
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .skill-grid h3 {
+      font-size: 18px;
+      color: var(--heading);
+      margin-bottom: 8px;
+    }
+    .experience {
+      margin-bottom: 25px;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      color: var(--heading);
+    }
+    .position {
+      font-weight: 500;
+      margin: 5px 0 10px;
+      color: var(--subtext);
+    }
+    .project-box {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .project-box h3 {
+      font-size: 20px;
+      color: var(--heading);
+    }
+    .project-box .sub {
+      font-size: 14px;
+      color: var(--subtext);
+      margin-bottom: 8px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--subtext);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" id="modeToggle">Dark Mode</button>
+
+  <header class="header">
+    <h1>Devesh G</h1>
+    <p class="role">Data Scientist & Analyst</p>
+    <div class="contact">
+      <p>📞 +91 9087272562</p>
+      <p>📧 deveshd003@gmail.com</p>
+      <p>📍 Maduravoyal, Chennai, India</p>
+      <p>🔗 <a href="https://www.linkedin.com/in/devesh-g-40430a253/">LinkedIn</a></p>
+      <p>💻 <a href="https://github.com/deveshd003-dj">GitHub</a></p>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>About</h2>
+    <p>
+      With a foundation in US healthcare operations and a passion for data, I’m bridging domain expertise with analytics.
+      From enrollment workflows to predictive models, I thrive on turning complexity into clarity.
+      Currently upskilling in Python, SQL, Power BI, and machine learning to drive smarter decision-making.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Skills</h2>
+    <div class="skill-grid">
+      <div>
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Power BI</li>
+          <li>Machine Learning (Basics)</li>
+          <li>Data Cleaning & Preparation</li>
+          <li>Data Visualization</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tools</h3>
+        <ul>
+          <li>Power BI</li>
+          <li>Jupyter Notebook</li>
+          <li>VS Code</li>
+          <li>GitHub</li>
+          <li>MySQL / PostgreSQL</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Critical Thinking</li>
+          <li>Attention to Detail</li>
+          <li>Communication</li>
+          <li>Problem-Solving</li>
+          <li>Time Management</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Work Experience</h2>
+    <div class="experience">
+      <div class="exp-header">
+        <h3>HCL Tech – Chennai</h3>
+        <span>Sep 2024 – May 2025</span>
+      </div>
+      <p class="position">Senior Customer Service Representative</p>
+      <ul>
+        <li>Supported healthcare operations with high accuracy and timely delivery.</li>
+        <li>Recognized for performance and problem-solving under pressure.</li>
+      </ul>
+    </div>
+    <div class="experience">
+      <div class="exp-header">
+        <h3>NTT DATA – Chennai</h3>
+        <span>Dec 2022 – Sep 2024</span>
+      </div>
+      <p class="position">HC Insurance & Operations Senior Representative</p>
+      <ul>
+        <li>Managed member enrollment for US healthcare clients.</li>
+        <li>Ensured data integrity and compliance with SLAs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Project</h2>
+    <div class="project-box">
+      <h3>📊 Adventure Works KPI Dashboard</h3>
+      <p class="sub">Tools Used: Power BI, DAX, Power Query</p>
+      <p class="sub">Domain: Manufacturing & Retail Analytics</p>
+      <ul>
+        <li>Built an interactive dashboard for a global cycling brand.</li>
+        <li>Tracked KPIs like sales, revenue, profit, and returns.</li>
+        <li>Compared regional performance and analyzed product trends.</li>
+        <li>Identified high-value customers using DAX & Power Query.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Education</h2>
+    <p><strong>Masters in Data Science & AI</strong> – Ongoing</p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Devesh G | Portfolio</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("modeToggle");
+    const body = document.body;
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      toggleBtn.textContent = body.classList.contains("dark") ? "Light Mode" : "Dark Mode";
+    });
+  </script>
+</body>
+</html>
